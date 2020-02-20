@@ -8,16 +8,11 @@
 class Data : public IData
 {
 public:
-    Data() {
-        inputPrint();
-    }
     void parser() override;
-    void inputPrint() override;
 
-private:
-    std::string mInputData;
-    std::list<std::string> mList;
-    std::string mDelimiter = " ";
+    std::string inputData;
+    std::list<std::string> list;
+    std::string delimiter = " ";
 };
 
 #endif // DATA_H

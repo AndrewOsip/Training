@@ -11,7 +11,7 @@ project (BinTree)
 set(SOURCES
         main.cpp
 
-        BinTree.cpp
+        BinaryTree.cpp
         Data.cpp
         )
 

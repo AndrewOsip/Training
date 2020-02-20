@@ -1,8 +1,8 @@
 #include <iostream>
 
-#include "BinTree.h"
+#include "BinaryTree.h"
 
-void BinTree::destroy_tree(Node *leaf){
+void BinaryTree::destroy_tree(Node *leaf){
     if(leaf != nullptr){
         destroy_tree(leaf->left);
         destroy_tree(leaf->right);
@@ -10,7 +10,7 @@ void BinTree::destroy_tree(Node *leaf){
     }
 }
 
-void BinTree::insert(int key, Node *leaf){
+void BinaryTree::insert(int key, Node *leaf){
 
     if(key < leaf->value){
         if(leaf->left != nullptr){
@@ -34,7 +34,7 @@ void BinTree::insert(int key, Node *leaf){
 
 }
 
-void BinTree::insert(int key){
+void BinaryTree::insert(int key){
     if(root != nullptr){
         insert(key, root);
     }else{
@@ -45,7 +45,7 @@ void BinTree::insert(int key){
     }
 }
 
-BinTree::Node *BinTree::search(int key, Node *leaf){
+Node *BinaryTree::search(int key, Node *leaf){
     if(leaf != nullptr){
         if(key == leaf->value){
             return leaf;
@@ -60,20 +60,20 @@ BinTree::Node *BinTree::search(int key, Node *leaf){
     }
 }
 
-BinTree::Node *BinTree::search(int key){
+Node *BinaryTree::search(int key){
     return search(key, root);
 }
 
-void BinTree::destroy_tree(){
+void BinaryTree::destroy_tree(){
     destroy_tree(root);
 }
 
-void BinTree::convert_print(){
+void BinaryTree::convert_print(){
     convert_print(root);
     std::cout << "\n";
 }
 
-void BinTree::convert_print(Node *leaf){
+void BinaryTree::convert_print(Node *leaf){
     if(leaf != nullptr){
         convert_print(leaf->left);
         std::cout << leaf->value << " ";
@@ -81,12 +81,12 @@ void BinTree::convert_print(Node *leaf){
     }
 }
 
-void BinTree::input_print(){
+void BinaryTree::input_print(){
     input_print(root);
     std::cout << "\n";
 }
 
-void BinTree::input_print(Node *leaf){
+void BinaryTree::input_print(Node *leaf){
     if(leaf != nullptr){
         std::cout << leaf->value << " ";
         convert_print(leaf->left);
