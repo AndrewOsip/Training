@@ -7,19 +7,15 @@ int main()
 {
     Data data;
     BinaryTree *tree = new BinaryTree();
-    while (data.inputData != "0")
-    {
-    std::cout << "Plese enter your value: ";
-    getline(std::cin, data.inputData);
-    data.parser();
-    }
+
+    data.parser(data);
 
     for(auto it = data.list.begin(); it != data.list.end(); it++) {
-    tree->insert(std::stoi(*it));
+        tree->insert(std::stoi(*it));
     }
 
-    tree->input_print();
     tree->convert_print();
+    tree->destroy_tree();
 
     return 0;
 }

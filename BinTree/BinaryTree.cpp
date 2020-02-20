@@ -45,25 +45,6 @@ void BinaryTree::insert(int key){
     }
 }
 
-Node *BinaryTree::search(int key, Node *leaf){
-    if(leaf != nullptr){
-        if(key == leaf->value){
-            return leaf;
-        }
-        if(key < leaf->value){
-            return search(key, leaf->left);
-        }else{
-            return search(key, leaf->right);
-        }
-    }else{
-        return nullptr;
-    }
-}
-
-Node *BinaryTree::search(int key){
-    return search(key, root);
-}
-
 void BinaryTree::destroy_tree(){
     destroy_tree(root);
 }
@@ -77,19 +58,6 @@ void BinaryTree::convert_print(Node *leaf){
     if(leaf != nullptr){
         convert_print(leaf->left);
         std::cout << leaf->value << " ";
-        convert_print(leaf->right);
-    }
-}
-
-void BinaryTree::input_print(){
-    input_print(root);
-    std::cout << "\n";
-}
-
-void BinaryTree::input_print(Node *leaf){
-    if(leaf != nullptr){
-        std::cout << leaf->value << " ";
-        convert_print(leaf->left);
         convert_print(leaf->right);
     }
 }

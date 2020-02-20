@@ -12,7 +12,6 @@ set(SOURCES
         main.cpp
 
         BinaryTree.cpp
-        Data.cpp
         )
 
 add_executable(BinTree ${SOURCES})
