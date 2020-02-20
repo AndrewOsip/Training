@@ -6,7 +6,6 @@
 void Data::parser(){
     size_t pos = inputData.find(delimiter);
     size_t initialPos = 0;
-    list.clear();
 
     while(pos != std::string::npos) {
         list.push_back(inputData.substr(initialPos, pos - initialPos));

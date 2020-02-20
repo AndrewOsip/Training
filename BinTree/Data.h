@@ -3,6 +3,7 @@
 
 #include "IData.h"
 #include <string>
+#include <vector>
 #include <list>
 
 class Data : public IData
@@ -13,6 +14,7 @@ public:
     std::string inputData;
     std::list<std::string> list;
     std::string delimiter = " ";
+    std::vector<std::string> vector;
 };
 
 #endif // DATA_H
