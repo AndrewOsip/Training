@@ -1,7 +1,9 @@
 #ifndef DATA_H
 #define DATA_H
 
-#include <IData.h>
+#include "IData.h"
+#include <string>
+#include <list>
 
 class Data : public IData
 {

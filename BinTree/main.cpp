@@ -1,9 +1,4 @@
-#include <iostream>
-#include <list>
-#include <vector>
-
-#include <BinTree.h>
-#include <Data.h>
+#include "Data.h"
 
 int main()
 {

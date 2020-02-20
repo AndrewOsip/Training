@@ -1,9 +1,6 @@
 #ifndef IDATA_H
 #define IDATA_H
 
-#include <string>
-#include <list>
-
 class IData
 {
 public:
