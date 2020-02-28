@@ -20,8 +20,8 @@ void Text::textTransform()
     mText.erase(std::remove(  mText.begin(),   mText.end(), '-'),   mText.end());
     mText.erase(std::remove(  mText.begin(),   mText.end(), '"'),   mText.end());
     mText.erase(std::remove(  mText.begin(),   mText.end(), '!'),   mText.end());
-    mText.erase(std::remove(  mText.begin(),   mText.end(), '\r'),   mText.end());
-    mText.erase(std::remove(  mText.begin(),   mText.end(), '\n'),   mText.end());
+    mText.erase(std::remove(  mText.begin(),   mText.end(), '\r'),  mText.end());
+    mText.erase(std::remove(  mText.begin(),   mText.end(), '\n'),  mText.end());
     mText.erase(std::remove(  mText.begin(),   mText.end(), '1'),   mText.end());
     mText.erase(std::remove(  mText.begin(),   mText.end(), '#'),   mText.end());
     mText.erase(std::remove(  mText.begin(),   mText.end(), '2'),   mText.end());
@@ -40,6 +40,9 @@ void Text::textTransform()
     mText.erase(std::remove(  mText.begin(),   mText.end(), '-'),   mText.end());
     mText.erase(std::remove(  mText.begin(),   mText.end(), '/'),   mText.end());
     mText.erase(std::remove(  mText.begin(),   mText.end(), '^'),   mText.end());
+
+//    std::string filt_elems( ",.;:!\?)(/1234567890&^@!#$%*_=+-" );
+//    while (( pos = word.find_first_of( filt_elems, pos ))
 
 
     std::transform(  mText.begin(),   mText.end(),   mText.begin(), tolower);

@@ -2,10 +2,9 @@
 #define VECTOR_H
 
 #include <fstream>
+#include <vector>
 
-#include "IVector.h"
-
-class Vector : public IVector
+class Vector : std::vector<std::string>
 {
 public:
     Vector(const std::string& fileName)
@@ -15,8 +14,8 @@ public:
                 numOfCoinc();
             }
 
-    const std::vector<std::string>& provideData() const override { return mVocebVector; }
-    ~Vector() override { mFileName.close(); }
+    const std::vector<std::string>& provideData() const { return mVocebVector; }
+    ~Vector() { mFileName.close(); }
 private:
     void vocebWrite();
     void numOfCoinc();
